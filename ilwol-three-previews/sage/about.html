@@ -311,10 +311,10 @@ window.CENTER = {"feeYear":2026,"rateSnapshot":{"day":[[41820,56060,69730],[3872
   /* 주야간보호센터란? + 색깔 카드 4개 */
   .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
   .tile { position: relative; min-height: 270px; padding: 36px 32px; color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
-  .tile h3 { font-size: clamp(26.4px, 2.64vw, 33.6px); font-weight: 800; letter-spacing: -.8px; line-height: 1.35; }
+  .tile.t1, .tile.t1 h3, .tile.t1 p, .tile.t1 svg { color:#fff !important; } .tile h3 { font-size: clamp(26.4px, 2.64vw, 33.6px); font-weight: 800; letter-spacing: -.8px; line-height: 1.35; }
   .tile p { font-size: 19.2px; opacity: .92; margin-top: 10px; }
   .tile svg { width: 84px; height: 84px; align-self: flex-end; fill: none; stroke: #fff; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; margin-top: 20px; }
-  .t1 { background: var(--gold); } .t2 { background: var(--slate); } .t3 { background: var(--taupe); } .t4 { background: var(--char); }
+  .t1 { background: var(--gold); color:#fff; } .t2 { background: var(--slate); } .t3 { background: var(--taupe); } .t4 { background: var(--char); }
   @media (max-width: 1000px) { .tiles { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .tiles { grid-template-columns: 1fr; } .tile { min-height: 0; } }
 
@@ -476,12 +476,12 @@ window.CENTER = {"feeYear":2026,"rateSnapshot":{"day":[[41820,56060,69730],[3872
   .bc { display: flex; flex-direction: column; padding: 30px 26px; color: #fff; min-height: 240px; transition: transform .25s, box-shadow .25s; }
   .bc:hover { transform: translateY(-4px); box-shadow: 0 16px 30px rgba(40, 30, 20, .18); }
   .bc svg { width: 56px; height: 56px; fill: none; stroke: #fff; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: auto; }
-  .bc h3 { font-size: 26.4px; font-weight: 800; letter-spacing: -.5px; margin-top: 26px; }
+  .blog .bc { color:#fff !important; text-decoration:none; min-height:190px !important; } .blog .bc h3 { color:#fff !important; text-decoration:none; } .bc h3 { font-size: 26.4px; font-weight: 800; letter-spacing: -.5px; margin-top: 26px; }
   .bc p { font-size: 19.2px; opacity: .92; margin-top: 4px; }
   .bc span { margin-top: 14px; font-size: 18px; font-weight: 700; opacity: .9; }
   .blog-cta { text-align: center; margin-top: 30px; }
   @media (max-width: 1000px) { .blog { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 520px) { .bc { min-height: 0; padding: 22px 18px; } .bc svg { width: 42px; height: 42px; } .bc h3 { font-size: 22.8px; margin-top: 16px; } .blog-cta .btn { width: 100%; } }
+  @media (max-width: 520px) { .bc { min-height: 0; padding: 22px 18px; } .bc svg { width: 42px; height: 42px; } .blog .bc { color:#fff !important; text-decoration:none; min-height:190px !important; } .blog .bc h3 { color:#fff !important; text-decoration:none; } .bc h3 { font-size: 22.8px; margin-top: 16px; } .blog-cta .btn { width: 100%; } }
 
   /* 상담 절차: 먹색 띠 */
   .consult { background: var(--char); color: #fff; }
@@ -630,7 +630,7 @@ window.CENTER = {"feeYear":2026,"rateSnapshot":{"day":[[41820,56060,69730],[3872
   .org { border-left: 0; border-top: 5px solid var(--gold); }
   .stats { border: 1px solid var(--line); background: #fff; }
   /* 색 칸(타일·태그·카드 머리·블로그 카드)만 배경색을 칠하고, 시설 안내 카드(.fc)는 흰 바탕 + 위쪽 색 띠로 둔다 */
-  :is(.tile, .tag, .m-head, .bc).t1 { background: var(--gold); }
+  :is(.tile, .tag, .m-head, .bc).t1 { background: var(--gold); color:#fff; }
   :is(.tile, .tag, .m-head, .bc).t2 { background: var(--green); }
   :is(.tile, .tag, .m-head, .bc).t3 { background: var(--taupe); }
   :is(.tile, .tag, .m-head, .bc).t4 { background: var(--green-deep); }
@@ -1183,12 +1183,12 @@ body {font-size:24px;line-height:1.85;}
  .head {max-width:none;}
  .tiles,.blog {gap:24px;}
  .tiles .tile {min-height:clamp(360px,25vw,500px);padding:38px clamp(24px,2vw,42px);}
- .tiles .tile h3 {font-size:clamp(30px,2.2vw,42px);line-height:1.45;}
+ .tiles .tile.t1, .tile.t1 h3, .tile.t1 p, .tile.t1 svg { color:#fff !important; } .tile h3 {font-size:clamp(30px,2.2vw,42px);line-height:1.45;}
  .tiles .tile p {font-size:24px;line-height:1.85;white-space:normal;}
  .tiles .tile svg {width:100px;height:100px;margin-top:32px;}
  .blog .bc {min-height:clamp(320px,22vw,440px);padding:34px 28px;}
  .blog .bc svg {width:70px;height:70px;margin-bottom:26px;}
- .blog .bc h3 {font-size:30px;line-height:1.5;margin-top:0;}
+ .blog .blog .bc { color:#fff !important; text-decoration:none; min-height:190px !important; } .blog .bc h3 { color:#fff !important; text-decoration:none; } .bc h3 {font-size:30px;line-height:1.5;margin-top:0;}
  .blog .bc p {font-size:23px;line-height:1.8;}
  .blog .bc span {font-size:22px;line-height:1.6;margin-top:auto;padding-top:24px;}
  .refvideo .iv-poster::after {width:112px;height:112px;left:50%;top:50%;transform:translate(-50%,-50%);margin:0;}
