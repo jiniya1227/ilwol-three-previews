@@ -1,0 +1,6 @@
+# Netlify _redirects — GEO 기준 02: 도메인 정규화(301 리디렉션) 및 멀티페이지 클린 URL 지원
+/home /index.html 301
+/about /about.html 200
+/program /program.html 200
+/guide /guide.html 200
+/contact /contact.html 200

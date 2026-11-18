@@ -1,0 +1,40 @@
+[build]
+  publish = "."
+[functions]
+  directory = "netlify/functions"
+  included_files = ["center-engine.js", "center-config.json"]
+[[redirects]]
+from = "/"
+to = "/.netlify/functions/center?page=index.html"
+status = 200
+force = true
+[[redirects]]
+from = "/index.html"
+to = "/.netlify/functions/center?page=index.html"
+status = 200
+force = true
+[[redirects]]
+from = "/about.html"
+to = "/.netlify/functions/center?page=about.html"
+status = 200
+force = true
+[[redirects]]
+from = "/program.html"
+to = "/.netlify/functions/center?page=program.html"
+status = 200
+force = true
+[[redirects]]
+from = "/guide.html"
+to = "/.netlify/functions/center?page=guide.html"
+status = 200
+force = true
+[[redirects]]
+from = "/contact.html"
+to = "/.netlify/functions/center?page=contact.html"
+status = 200
+force = true
+[[redirects]]
+from = "/llms.txt"
+to = "/.netlify/functions/center?page=llms.txt"
+status = 200
+force = true
